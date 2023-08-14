@@ -1,0 +1,35 @@
+<div class="flex">
+    <table class="table-auto flex-none my-3">
+        <thead>
+          <tr>
+            <th>IATA Code</th>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of IATAflightDetails">
+            <td>{{ data.IATACode }}</td>
+            <td>{{ data.name }}</td>
+            <td>{{ data.price }}</td>
+          </tr>
+        </tbody>
+    </table>
+    <div class="flex-initial mx-3 my-3">
+        <app-search-flights></app-search-flights>
+    </div>
+    <table class="table-auto flex-initial my-3">
+        <thead>
+          <tr>
+            <th>IATA Code</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of IATACityCodes">
+            <td>{{ data.IATACode }}</td>
+            <td>{{ data.city }}</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
